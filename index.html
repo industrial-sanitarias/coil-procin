@@ -15,12 +15,13 @@
 html,body{height:100%;background:#0f1b2b;overflow:hidden;font-family:'Inter',system-ui,sans-serif;color:var(--ink)}
 #viewport{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
 #stage{width:1600px;height:900px;position:relative;flex:none;transform-origin:center}
-.slide{position:absolute;inset:0;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .5s}
-.slide.active{opacity:1;pointer-events:auto}
+.slide{position:absolute;inset:0;overflow:hidden;display:none}
+.slide.active{display:block;animation:fadeS .45s ease}
+@keyframes fadeS{from{opacity:0}to{opacity:1}}
 /* fondos degradados tipo COIL */
 .slide::before{content:"";position:absolute;inset:0;z-index:0;background:var(--bg)}
-.slide::after{content:"";position:absolute;inset:0;z-index:0;opacity:.35;mix-blend-mode:soft-light;
-  background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1.2px);background-size:5px 5px}
+@media (hover:hover) and (pointer:fine){.slide::after{content:"";position:absolute;inset:0;z-index:0;opacity:.35;mix-blend-mode:soft-light;
+  background-image:radial-gradient(rgba(255,255,255,.5) 1px,transparent 1.2px);background-size:5px 5px}}
 .slide>*{position:relative;z-index:1}
 .g1{--bg:linear-gradient(115deg,#c8553a 0%,#e59a5a 28%,#b9c8b2 52%,#3aa6c9 75%,#1d5fae 100%)}
 .g2{--bg:radial-gradient(ellipse at 15% 20%,#e7a46a 0%,transparent 55%),radial-gradient(ellipse at 90% 85%,#1f68b5 0%,transparent 60%),linear-gradient(135deg,#d06a45,#9fcfc4 55%,#2f8ccc)}
@@ -28,7 +29,7 @@ html,body{height:100%;background:#0f1b2b;overflow:hidden;font-family:'Inter',sys
 .g4{--bg:linear-gradient(100deg,#f1d2b3 0%,#eab184 22%,#a6d1c8 55%,#3b9fcf 80%,#1c5aa6 100%)}
 .g5{--bg:radial-gradient(ellipse at 50% 120%,#1f62b0 0%,transparent 60%),linear-gradient(120deg,#cf5e3c,#e6a361 35%,#6fbcbd 70%,#2470bf)}
 .abs{position:absolute}
-.glass{background:var(--glass);border-radius:30px;box-shadow:0 22px 50px rgba(18,35,70,.28);border:1.5px solid rgba(255,255,255,.95);backdrop-filter:blur(8px)}
+.glass{background:var(--glass);border-radius:30px;box-shadow:0 22px 50px rgba(18,35,70,.28);border:1.5px solid rgba(255,255,255,.95);}
 .pill{background:#fff;border-radius:14px;box-shadow:0 8px 20px rgba(18,35,70,.18);padding:12px 18px}
 .pt{color:var(--pt)}
 h2.t{position:absolute;left:70px;top:44px;right:70px;font-weight:300;font-size:50px;line-height:1.12;letter-spacing:-.5px;color:#1c2533}
@@ -352,7 +353,7 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
     <div class="ac">Intercambio Académico Chile – Brasil</div>
     <div class="who">Prof. Cristóbal Zamora Durán · Escuela Industrial GRC, San Felipe &nbsp;|&nbsp; Prof. Adilson Rodrigues Camacho · Etec 154</div>
   </div>
-  <div class="abs logos a" style="--d:3"><img src="assets/logos-coil.png" alt="SNA Educa, ARInter, CPS, São Paulo"></div>
+  <div class="abs logos a" style="--d:3"><img loading="lazy" decoding="async" src="assets/logos-coil.png" alt="SNA Educa, ARInter, CPS, São Paulo"></div>
 </section>
 
 <!-- 2 -->
@@ -438,8 +439,8 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 <!-- PADLET 2 -->
 <section class="slide g3" id="pd2" data-notes="<b>Desde Brasil (2 min).</b> Adilson abrió el mural con un gancho distinto: la Etec está entre ríos escondidos (canalizados) que ayudaron a construir São Paulo. El agua de la zona llega desde el Sistema Cantareira.">
   <h2 class="t a">Desde Brasil: <b>Los Ríos Escondidos</b><span class="pt">Do Brasil: Os Rios Escondidos</span></h2>
-  <div class="pol zoom m1 a" style="--d:1;transform:rotate(-2deg)" data-cap="Ríos cerca de la Etec · Rios perto da Etec"><img src="assets/padlet/p01_0.jpg" alt="Ríos cerca de la Etec"><div class="cp">Ríos cerca de la Etec · <span>Rios perto da Etec</span></div></div>
-  <div class="pol zoom m2 a" style="--d:2;transform:rotate(2deg)" data-cap="Sistema Cantareira · Sistema Cantareira"><img src="assets/padlet/p01_2.jpg" alt="Sistema Cantareira"><div class="cp">Sistema Cantareira · <span>Sistema Cantareira</span></div></div>
+  <div class="pol zoom m1 a" style="--d:1;transform:rotate(-2deg)" data-cap="Ríos cerca de la Etec · Rios perto da Etec"><img loading="lazy" decoding="async" src="assets/padlet/p01_0.jpg" alt="Ríos cerca de la Etec"><div class="cp">Ríos cerca de la Etec · <span>Rios perto da Etec</span></div></div>
+  <div class="pol zoom m2 a" style="--d:2;transform:rotate(2deg)" data-cap="Sistema Cantareira · Sistema Cantareira"><img loading="lazy" decoding="async" src="assets/padlet/p01_2.jpg" alt="Sistema Cantareira"><div class="cp">Sistema Cantareira · <span>Sistema Cantareira</span></div></div>
   <div class="abs side">
     <div class="pill a" style="--d:2">La Etec está entre ríos escondidos que ayudaron a construir São Paulo y que hoy influyen en el abastecimiento, las inundaciones y la calidad ambiental.<span class="pt">A Etec está entre rios escondidos que ajudaram a construir São Paulo e que influenciam o abastecimento, as enchentes e a qualidade ambiental.</span></div>
     <div class="pill a" style="--d:3"><b>Microcuencas</b> de los arroyos Anhanguera y da Luz, del sistema del río Tietê, hoy casi totalmente canalizados.<span class="pt">Microbacias dos córregos Anhanguera e da Luz, do sistema do Tietê, hoje quase totalmente canalizados.</span></div>
@@ -453,16 +454,16 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 <section class="slide g2" id="pd3" data-notes="<b>Estudiantes de Brasil (2 min).</b> El grupo de bebederos revisó los equipos de cada piso. Leer su conclusión en portugués y luego en español. Comentar que organizaron el inventario en cinco grupos.">
   <h2 class="t w a">Estudiantes de Brasil: <b>Inventario en la Etec</b><span class="pt" style="color:#fff">Estudantes do Brasil: Inventário na Etec</span></h2>
   <div class="abs row5">
-    <div class="pol zoom a" style="--d:1;transform:rotate(-1.5deg)" data-cap="Planta baja · Térreo"><img src="assets/padlet/p06_0.jpg" alt="Planta baja"><div class="cp">Planta baja · <span>Térreo</span></div></div>
-    <div class="pol zoom a" style="--d:2;transform:rotate(1deg)" data-cap="No instalado · Não instalado"><img src="assets/padlet/p06_1.jpg" alt="No instalado"><div class="cp">No instalado · <span>Não instalado</span></div></div>
-    <div class="pol zoom a" style="--d:3;transform:rotate(-1deg)" data-cap="2° piso · 2º andar"><img src="assets/padlet/p06_2.jpg" alt="2° piso"><div class="cp">2° piso · <span>2º andar</span></div></div>
-    <div class="pol zoom a" style="--d:4;transform:rotate(1.5deg)" data-cap="3° piso · 3º andar"><img src="assets/padlet/p06_3.jpg" alt="3° piso"><div class="cp">3° piso · <span>3º andar</span></div></div>
-    <div class="pol zoom a" style="--d:5;transform:rotate(-1deg)" data-cap="4° piso · 4º andar"><img src="assets/padlet/p06_4.jpg" alt="4° piso"><div class="cp">4° piso · <span>4º andar</span></div></div>
+    <div class="pol zoom a" style="--d:1;transform:rotate(-1.5deg)" data-cap="Planta baja · Térreo"><img loading="lazy" decoding="async" src="assets/padlet/p06_0.jpg" alt="Planta baja"><div class="cp">Planta baja · <span>Térreo</span></div></div>
+    <div class="pol zoom a" style="--d:2;transform:rotate(1deg)" data-cap="No instalado · Não instalado"><img loading="lazy" decoding="async" src="assets/padlet/p06_1.jpg" alt="No instalado"><div class="cp">No instalado · <span>Não instalado</span></div></div>
+    <div class="pol zoom a" style="--d:3;transform:rotate(-1deg)" data-cap="2° piso · 2º andar"><img loading="lazy" decoding="async" src="assets/padlet/p06_2.jpg" alt="2° piso"><div class="cp">2° piso · <span>2º andar</span></div></div>
+    <div class="pol zoom a" style="--d:4;transform:rotate(1.5deg)" data-cap="3° piso · 3º andar"><img loading="lazy" decoding="async" src="assets/padlet/p06_3.jpg" alt="3° piso"><div class="cp">3° piso · <span>3º andar</span></div></div>
+    <div class="pol zoom a" style="--d:5;transform:rotate(-1deg)" data-cap="4° piso · 4º andar"><img loading="lazy" decoding="async" src="assets/padlet/p06_4.jpg" alt="4° piso"><div class="cp">4° piso · <span>4º andar</span></div></div>
   </div>
   <div class="abs glass concl a" style="--d:5"><div class="lb">GRUPO BEBEDOUROS · CONCLUSIÓN</div><p class="pt">“Apesar de alguns vazamentos, o funcionamento geral dos aparelhos foi bom e aparentemente não tem desperdício do uso da água.”</p><p>A pesar de algunas filtraciones, el funcionamiento general de los bebederos fue bueno y aparentemente no hay desperdicio de agua.</p></div>
   <div class="abs glass grp a" style="--d:6"><h4>Inventario en 5 grupos<span>Inventário em 5 grupos</span></h4><ul>
     <li>1 · Baños masculinos <span>· Banheiros masculinos</span></li><li>2 · Baños femeninos <span>· Banheiros femininos</span></li><li>3 · Bebederos <span>· Bebedouros</span></li><li>4 · Cantina/cocina <span>· Cantina/cozinha</span></li><li>5 · Áreas externas <span>· Áreas externas</span></li></ul></div>
-  <div class="pol zoom pl a" style="--d:7;transform:rotate(3deg)" data-cap="Dibujo de la planta del primer piso de la Etec · Desenho da planta do primeiro andar"><img src="assets/padlet/p05_0.jpg" alt="Planta 1° piso"><div class="cp">Planta 1° piso · <span>Planta 1º andar</span></div></div>
+  <div class="pol zoom pl a" style="--d:7;transform:rotate(3deg)" data-cap="Dibujo de la planta del primer piso de la Etec · Desenho da planta do primeiro andar"><img loading="lazy" decoding="async" src="assets/padlet/p05_0.jpg" alt="Planta 1° piso"><div class="cp">Planta 1° piso · <span>Planta 1º andar</span></div></div>
 </section>
 
 <!-- 6 -->
@@ -477,16 +478,16 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 <!-- PADLET 4 -->
 <section class="slide g1" id="pd4" data-notes="<b>Estudiantes de Chile: auditoría (2 min).</b> Fotos subidas por los propios estudiantes al Padlet: baños, urinarios, inodoros y lavamanos. En el teléfono, el plano que un grupo levantó con una app de medición.">
   <h2 class="t w a" style="left:420px">Estudiantes de Chile: <b>Auditoría en Terreno</b><span class="pt" style="color:#fff">Estudantes do Chile: Auditoria em Campo</span></h2>
-  <div class="phone a" style="--d:1"><div class="scr"><img src="assets/padlet/p08_0.jpg" alt="Plano en app"></div></div>
+  <div class="phone a" style="--d:1"><div class="scr"><img loading="lazy" decoding="async" src="assets/padlet/p08_0.jpg" alt="Plano en app"></div></div>
   <div class="abs ptag a" style="--d:2">Plano del baño de hombres<span>Planta do banheiro masculino</span></div>
-  <div class="abs mason"><div class="pol zoom a" style="left:0px;top:0px;width:330px;height:250px;transform:rotate(-2deg);--d:1" data-cap="Baño 1 · Banheiro 1"><img src="assets/padlet/p07_0.jpg" alt="Baño 1"><div class="cp">Baño 1 · <span>Banheiro 1</span></div></div><div class="pol zoom a" style="left:370px;top:10px;width:330px;height:250px;transform:rotate(1.5deg);--d:2" data-cap="Urinarios · Mictórios"><img src="assets/padlet/p09_0.jpg" alt="Urinarios"><div class="cp">Urinarios · <span>Mictórios</span></div></div><div class="pol zoom a" style="left:740px;top:0px;width:330px;height:250px;transform:rotate(-1deg);--d:3" data-cap="Inodoros · Vasos sanitários"><img src="assets/padlet/p25_0.jpg" alt="Inodoros"><div class="cp">Inodoros · <span>Vasos sanitários</span></div></div><div class="pol zoom a" style="left:20px;top:300px;width:250px;height:330px;transform:rotate(1.5deg);--d:4" data-cap="Lavamanos · Pias"><img src="assets/padlet/p22_0.jpg" alt="Lavamanos"><div class="cp">Lavamanos · <span>Pias</span></div></div><div class="pol zoom a" style="left:300px;top:310px;width:250px;height:330px;transform:rotate(-1.5deg);--d:5" data-cap="Baños traseros · Banheiros dos fundos"><img src="assets/padlet/p20_0.jpg" alt="Baños traseros"><div class="cp">Baños traseros · <span>Fundos</span></div></div><div class="pol zoom a" style="left:580px;top:300px;width:250px;height:330px;transform:rotate(2deg);--d:6" data-cap="Lavamanos · Pias"><img src="assets/padlet/p24_0.jpg" alt="Lavamanos"><div class="cp">Lavamanos · <span>Pias</span></div></div><div class="pol zoom a" style="left:860px;top:290px;width:230px;height:330px;transform:rotate(-2deg);--d:7" data-cap="Baño taller · Banheiro da oficina"><img src="assets/padlet/p25_1.jpg" alt="Baño taller"><div class="cp">Baño taller · <span>Banheiro da oficina</span></div></div></div>
+  <div class="abs mason"><div class="pol zoom a" style="left:0px;top:0px;width:330px;height:250px;transform:rotate(-2deg);--d:1" data-cap="Baño 1 · Banheiro 1"><img loading="lazy" decoding="async" src="assets/padlet/p07_0.jpg" alt="Baño 1"><div class="cp">Baño 1 · <span>Banheiro 1</span></div></div><div class="pol zoom a" style="left:370px;top:10px;width:330px;height:250px;transform:rotate(1.5deg);--d:2" data-cap="Urinarios · Mictórios"><img loading="lazy" decoding="async" src="assets/padlet/p09_0.jpg" alt="Urinarios"><div class="cp">Urinarios · <span>Mictórios</span></div></div><div class="pol zoom a" style="left:740px;top:0px;width:330px;height:250px;transform:rotate(-1deg);--d:3" data-cap="Inodoros · Vasos sanitários"><img loading="lazy" decoding="async" src="assets/padlet/p25_0.jpg" alt="Inodoros"><div class="cp">Inodoros · <span>Vasos sanitários</span></div></div><div class="pol zoom a" style="left:20px;top:300px;width:250px;height:330px;transform:rotate(1.5deg);--d:4" data-cap="Lavamanos · Pias"><img loading="lazy" decoding="async" src="assets/padlet/p22_0.jpg" alt="Lavamanos"><div class="cp">Lavamanos · <span>Pias</span></div></div><div class="pol zoom a" style="left:300px;top:310px;width:250px;height:330px;transform:rotate(-1.5deg);--d:5" data-cap="Baños traseros · Banheiros dos fundos"><img loading="lazy" decoding="async" src="assets/padlet/p20_0.jpg" alt="Baños traseros"><div class="cp">Baños traseros · <span>Fundos</span></div></div><div class="pol zoom a" style="left:580px;top:300px;width:250px;height:330px;transform:rotate(2deg);--d:6" data-cap="Lavamanos · Pias"><img loading="lazy" decoding="async" src="assets/padlet/p24_0.jpg" alt="Lavamanos"><div class="cp">Lavamanos · <span>Pias</span></div></div><div class="pol zoom a" style="left:860px;top:290px;width:230px;height:330px;transform:rotate(-2deg);--d:7" data-cap="Baño taller · Banheiro da oficina"><img loading="lazy" decoding="async" src="assets/padlet/p25_1.jpg" alt="Baño taller"><div class="cp">Baño taller · <span>Banheiro da oficina</span></div></div></div>
 </section>
 
 <!-- 7 -->
 <section class="slide g1" id="s7" data-notes="<b>Levantamiento técnico (2 min).</b> Con lo medido en terreno se dibujaron planos del emplazamiento y la ubicación de los artefactos. Hacer clic para ampliar.">
   <h2 class="t w a">Levantamiento Técnico: <b>Del Terreno al Plano</b><span class="pt" style="color:#fff">Levantamento Técnico: Do Campo à Planta</span></h2>
-  <div class="abs pl zoom a" style="left:90px;transform:rotate(-1.5deg);--d:1" data-cap="Plano baño · Planta do banheiro"><img src="assets/plano-bano.jpg" alt="Plano baño"><p>Baño de alumnos · <span>Banheiro</span></p></div>
-  <div class="abs pl zoom a" style="left:550px;transform:rotate(1.5deg);--d:2" data-cap="Plano cocina · Planta da cozinha"><img src="assets/plano-cocina.jpg" alt="Plano cocina"><p>Cocina · <span>Cozinha</span></p></div>
+  <div class="abs pl zoom a" style="left:90px;transform:rotate(-1.5deg);--d:1" data-cap="Plano baño · Planta do banheiro"><img loading="lazy" decoding="async" src="assets/plano-bano.jpg" alt="Plano baño"><p>Baño de alumnos · <span>Banheiro</span></p></div>
+  <div class="abs pl zoom a" style="left:550px;transform:rotate(1.5deg);--d:2" data-cap="Plano cocina · Planta da cozinha"><img loading="lazy" decoding="async" src="assets/plano-cocina.jpg" alt="Plano cocina"><p>Cocina · <span>Cozinha</span></p></div>
   <div class="abs side">
     <div class="row a" style="--d:3"><div class="ic" data-i="ruler"></div><div class="pill"><b>Medición en terreno</b><span class="pt">Medição em campo</span></div></div>
     <div class="row a" style="--d:4"><div class="ic" data-i="plan"></div><div class="pill"><b>Plano de emplazamiento</b> y ubicación de artefactos<span class="pt">Planta de localização dos aparelhos</span></div></div>
@@ -545,14 +546,14 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 <section class="slide g5" id="pd5" data-notes="<b>Taller del filtro en el Padlet (3 min).</b> Recorrer los pasos con las fotos de los estudiantes y reproducir el video de la prueba (3 min, se puede adelantar). Destacar que usaron materiales del establecimiento y traídos desde la casa.">
   <h2 class="t w a">Así Construimos <b>Nuestro Filtro</b><span class="pt" style="color:#fff">Assim Construímos o Nosso Filtro</span></h2>
   <div class="abs steps">
-    <div class="stp zoom a" style="--d:1" data-cap="Materiales · Materiais"><img src="assets/padlet/p14_0.jpg" alt=""><div><i>1</i>Materiales<span>Materiais</span></div></div>
-    <div class="stp zoom a" style="--d:2" data-cap="Harneado de arena · Peneiramento da areia"><img src="assets/padlet/p12_0.jpg" alt=""><div><i>2</i>Harneado de arena<span>Peneiramento da areia</span></div></div>
-    <div class="stp zoom a" style="--d:3" data-cap="Montaje por capas · Montagem por camadas"><img src="assets/padlet/p23_0.jpg" alt=""><div><i>3</i>Montaje por capas<span>Montagem por camadas</span></div></div>
-    <div class="stp zoom a" style="--d:4" data-cap="Filtro terminado · Filtro pronto"><img src="assets/padlet/p10_0.jpg" alt=""><div><i>4</i>Filtro terminado<span>Filtro pronto</span></div></div>
+    <div class="stp zoom a" style="--d:1" data-cap="Materiales · Materiais"><img loading="lazy" decoding="async" src="assets/padlet/p14_0.jpg" alt=""><div><i>1</i>Materiales<span>Materiais</span></div></div>
+    <div class="stp zoom a" style="--d:2" data-cap="Harneado de arena · Peneiramento da areia"><img loading="lazy" decoding="async" src="assets/padlet/p12_0.jpg" alt=""><div><i>2</i>Harneado de arena<span>Peneiramento da areia</span></div></div>
+    <div class="stp zoom a" style="--d:3" data-cap="Montaje por capas · Montagem por camadas"><img loading="lazy" decoding="async" src="assets/padlet/p23_0.jpg" alt=""><div><i>3</i>Montaje por capas<span>Montagem por camadas</span></div></div>
+    <div class="stp zoom a" style="--d:4" data-cap="Filtro terminado · Filtro pronto"><img loading="lazy" decoding="async" src="assets/padlet/p10_0.jpg" alt=""><div><i>4</i>Filtro terminado<span>Filtro pronto</span></div></div>
   </div>
   <div class="abs team">
-    <div class="pol zoom a" style="--d:5;transform:rotate(-2deg)" data-cap="Equipo de taller · Equipe da oficina"><img src="assets/padlet/p18_0.jpg" alt="Equipo de taller"><div class="cp">Equipo de taller · <span>Equipe da oficina</span></div></div>
-    <div class="pol zoom a" style="--d:6;transform:rotate(2deg)" data-cap="Filtros terminados · Filtros prontos"><img src="assets/padlet/p16_0.jpg" alt="Filtros terminados"><div class="cp">Filtros terminados · <span>Filtros prontos</span></div></div>
+    <div class="pol zoom a" style="--d:5;transform:rotate(-2deg)" data-cap="Equipo de taller · Equipe da oficina"><img loading="lazy" decoding="async" src="assets/padlet/p18_0.jpg" alt="Equipo de taller"><div class="cp">Equipo de taller · <span>Equipe da oficina</span></div></div>
+    <div class="pol zoom a" style="--d:6;transform:rotate(2deg)" data-cap="Filtros terminados · Filtros prontos"><img loading="lazy" decoding="async" src="assets/padlet/p16_0.jpg" alt="Filtros terminados"><div class="cp">Filtros terminados · <span>Filtros prontos</span></div></div>
     <div class="glass a" style="--d:7"><div class="lb">EN PALABRAS DE LOS ESTUDIANTES</div>“En esta clase probamos nuestro filtro casero, construido con materiales del establecimiento y traídos desde casa. Nuestro objetivo era purificar el agua y retener sus impurezas.”<span class="pt">“Nesta aula testamos nosso filtro caseiro, feito com materiais da escola e trazidos de casa. Nosso objetivo era purificar a água e reter suas impurezas.”</span></div>
   </div>
   <div class="phone a" style="--d:3"><div class="scr"><div class="notch"></div><video src="assets/padlet/video-filtro.mp4" poster="assets/padlet/p19_frame0.jpg" controls playsinline preload="none"></video></div></div>
@@ -584,7 +585,7 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 <!-- 11 -->
 <section class="slide g3" id="s11" data-notes="<b>Optimización (3 min).</b> Recorrer el plano y luego la cadena de abajo. Los filtros trabajan por gravedad; la bomba de 0,5 HP con press control solo eleva y presuriza el agua almacenada para el riego. Es un módulo demostrativo.">
   <h2 class="t a">Desarrollo Técnico IV: <b>Reutilización</b><span class="pt">Desenvolvimento Técnico IV: Reúso da Água</span></h2>
-  <div class="abs plan zoom a" style="--d:1" data-cap="Módulo de filtrado y reutilización · Módulo de filtragem e reúso"><img src="assets/plan-modulo.png" alt="Plano del módulo"></div>
+  <div class="abs plan zoom a" style="--d:1" data-cap="Módulo de filtrado y reutilización · Módulo de filtragem e reúso"><img loading="lazy" decoding="async" src="assets/plan-modulo.png" alt="Plano del módulo"></div>
   <div class="abs side">
     <div class="pill a" style="--d:2"><b>Diagnóstico:</b> la auditoría mostró dónde se usa el agua en la escuela.<span class="pt">Diagnóstico: a auditoria mostrou onde a água é usada.</span></div>
     <div class="pill a" style="--d:3"><b>Solución:</b> filtrar por estratos y reutilizar el agua en riego por goteo.<span class="pt">Solução: filtrar por camadas e reutilizar a água na irrigação.</span></div>
@@ -693,7 +694,7 @@ const F={cl:'<svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#d52b1e
 document.querySelectorAll('.flag').forEach(e=>e.innerHTML=F[e.dataset.f]);
 
 /* burbujas */
-document.querySelectorAll('.slide').forEach((s,k)=>{for(let i=0;i<7;i++){const b=document.createElement('div');b.className='bub';const z=8+((i*7+k*3)%22);
+if(matchMedia('(hover:hover) and (pointer:fine)').matches)document.querySelectorAll('.slide').forEach((s,k)=>{for(let i=0;i<7;i++){const b=document.createElement('div');b.className='bub';const z=8+((i*7+k*3)%22);
  b.style.cssText=`width:${z}px;height:${z}px;left:${(i*233+k*97)%1600}px;top:${900+((i*53)%120)}px;animation-duration:${14+(i*5+k)%12}s;animation-delay:${-((i*3+k)%14)}s`;s.prepend(b)}});
 
 /* navegación */
@@ -702,7 +703,7 @@ function fit(){stage.style.transform='scale('+Math.min(innerWidth/1600,innerHeig
 const notes=document.getElementById('notes');
 function show(i){cur=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,k)=>s.classList.toggle('active',k===cur));
  document.getElementById('counter').textContent=(cur+1)+' / '+slides.length;document.getElementById('progress').style.width=((cur+1)/slides.length*100)+'%';
- notes.innerHTML=slides[cur].dataset.notes||'';document.querySelectorAll('video').forEach(v=>{if(!slides[cur].contains(v))v.pause()});
+ notes.innerHTML=slides[cur].dataset.notes||'';if(slides[cur].id==='s5'&&window.drawGantt)requestAnimationFrame(window.drawGantt);document.querySelectorAll('video').forEach(v=>{if(!slides[cur].contains(v))v.pause()});
  try{history.replaceState(null,'','#s'+(cur+1))}catch(e){}}
 document.getElementById('bNext').onclick=()=>show(cur+1);document.getElementById('bPrev').onclick=()=>show(cur-1);
 document.getElementById('bNotes').onclick=()=>notes.classList.toggle('show');
@@ -747,7 +748,7 @@ const G=[
 ];
 const gt=document.getElementById('gantt');
 gt.innerHTML='<tr><th></th>'+months.map(m=>`<th>${m[0]}<span>${m[1]}</span></th>`).join('')+'</tr>'+G.map(g=>`<tr><td class="lab">${g[0]}<span>${g[1]}</span></td>${months.map(()=>'<td class="m"></td>').join('')}</tr>`).join('');
-requestAnimationFrame(()=>{const rows=[...gt.rows].slice(1);
+let ganttDone=false;window.drawGantt=()=>{if(ganttDone)return;ganttDone=true;const rows=[...gt.rows].slice(1);
  const x=(m,d)=>{const r=rows[0].cells;const c=r[1+m-5];return c.offsetLeft+c.offsetWidth*(d-0.5)/31};
  rows.forEach((r,k)=>{const g=G[k];const host=r.cells[1];host.style.position='relative';
   const wrap=document.createElement('div');wrap.style.cssText='position:absolute;left:0;top:0;height:100%;width:0';host.appendChild(wrap);
@@ -755,7 +756,7 @@ requestAnimationFrame(()=>{const rows=[...gt.rows].slice(1);
   if(g[2]){const p=x(...g[2]),e=x(...g[3]);if(Math.abs(e-p)>4){const ln=document.createElement('div');ln.className='lnk';ln.style.left=(p-base)+'px';ln.style.width=(e-p)+'px';wrap.appendChild(ln);add('plan',p,(e-p)>44?String(g[2][1]).padStart(2,'0')+'/'+String(g[2][0]).padStart(2,'0'):'')}
    add('exe',e,String(g[3][1]).padStart(2,'0')+'/'+String(g[3][0]).padStart(2,'0'))}
   else add('now',x(...g[3]),'cierre');
- })});
+ })};
 
 /* S6 zonas */
 const Z=[['Baño de alumnos','Banheiro dos alunos',['bano-al-1','bano-al-2','bano-al-3']],['Cocina','Cozinha',['cocina-1','cocina-2','cocina-3']],['Riego áreas verdes','Irrigação áreas verdes',['riego-1','riego-2','riego-3','riego-4']],['Baños varones','Banheiros masculinos',['bano-va-1','bano-va-2','bano-va-3','bano-va-4']]];
