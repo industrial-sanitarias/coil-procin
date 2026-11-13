@@ -186,7 +186,7 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 #s9 .info h3 span{display:block;color:var(--pt);font-size:22px}
 #s9 .info .pt{display:block;font-size:17px;margin-top:10px;font-weight:600}
 #s9 .order{left:70px;top:640px;width:380px;padding:18px 22px;font-size:17px;line-height:1.35;border-radius:20px}
-#s9 .lay{cursor:pointer;transition:filter .2s}#s9 .lay:hover{filter:brightness(1.15)}
+#s9 .lay{cursor:pointer;transition:fill-opacity .2s}#s9 .lay:hover{fill-opacity:.18}
 #s9 .drip{animation:drip 1.8s infinite ease-in}
 @keyframes drip{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(70px);opacity:0}}
 
@@ -533,27 +533,13 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 <section class="slide g5" id="s9" data-notes="<b>Filtro de estratos (4 min).</b> Hacer clic en cada etiqueta o capa y preguntar al curso su función antes de leerla. Montaje desde la salida hacia arriba.">
   <h2 class="t c a">Proyecto Práctico: <b>Filtro de Estratos</b><span class="pt">Projeto Prático: Filtro de Camadas</span></h2>
   <svg class="bottle a" style="--d:1" width="400" height="720" viewBox="0 0 400 720">
-    <defs>
-      <pattern id="pGG" width="60" height="44" patternUnits="userSpaceOnUse"><rect width="60" height="44" fill="#6c5a49"/><ellipse cx="15" cy="14" rx="14" ry="11" fill="#b4a18c"/><ellipse cx="45" cy="30" rx="15" ry="12" fill="#9c8873"/><ellipse cx="48" cy="8" rx="9" ry="7" fill="#c3b29e"/><ellipse cx="14" cy="38" rx="10" ry="7" fill="#8e7b66"/></pattern>
-      <pattern id="pGF" width="22" height="18" patternUnits="userSpaceOnUse"><rect width="22" height="18" fill="#7d6c5c"/><circle cx="6" cy="6" r="5" fill="#b2a291"/><circle cx="17" cy="13" r="4.5" fill="#9b8a77"/></pattern>
-      <pattern id="pAG" width="10" height="10" patternUnits="userSpaceOnUse"><rect width="10" height="10" fill="#c49a62"/><circle cx="3" cy="3" r="2" fill="#dcb987"/><circle cx="8" cy="7" r="1.6" fill="#a87f4a"/></pattern>
-      <pattern id="pAF" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#dcc08e"/><circle cx="1.5" cy="1.5" r=".9" fill="#f0dcb4"/></pattern>
-      <pattern id="pCA" width="40" height="34" patternUnits="userSpaceOnUse"><rect width="40" height="34" fill="#121212"/><polygon points="4,6 16,2 20,12 8,16" fill="#3a3a3a"/><polygon points="24,16 36,14 38,28 26,30" fill="#2b2b2b"/><polygon points="6,22 16,20 14,32 4,30" fill="#444"/></pattern>
-      <pattern id="pAL" width="36" height="28" patternUnits="userSpaceOnUse"><rect width="36" height="28" fill="#eef1f5"/><path d="M0 14 q9 -12 18 0 t18 0" stroke="#fff" stroke-width="6" fill="none"/><path d="M0 26 q9 -10 18 0 t18 0" stroke="#d9dee6" stroke-width="3" fill="none"/></pattern>
-      <clipPath id="bc"><path d="M80 40 h240 q20 0 20 20 v430 q0 30 -40 60 l-50 40 v40 h-100 v-40 l-50 -40 q-40 -30 -40 -60 v-430 q0 -20 20 -20z"/></clipPath>
-      <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".2" stop-color="#fff" stop-opacity=".1"/><stop offset=".85" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity=".35"/></linearGradient>
-    </defs>
-    <g clip-path="url(#bc)">
-      <rect class="lay" data-i="0" x="60" y="40" width="300" height="80" fill="url(#pGG)"/>
-      <rect class="lay" data-i="1" x="60" y="120" width="300" height="70" fill="url(#pGF)"/>
-      <rect class="lay" data-i="2" x="60" y="190" width="300" height="70" fill="url(#pAG)"/>
-      <rect class="lay" data-i="3" x="60" y="260" width="300" height="80" fill="url(#pAF)"/>
-      <rect class="lay" data-i="4" x="60" y="340" width="300" height="100" fill="url(#pCA)"/>
-      <rect class="lay" data-i="5" x="60" y="440" width="300" height="190" fill="url(#pAL)"/>
-      <rect x="60" y="0" width="300" height="680" fill="url(#gl)" pointer-events="none"/>
-    </g>
-    <path d="M80 40 h240 q20 0 20 20 v430 q0 30 -40 60 l-50 40 v40 h-100 v-40 l-50 -40 q-40 -30 -40 -60 v-430 q0 -20 20 -20z" fill="none" stroke="rgba(255,255,255,.95)" stroke-width="5"/>
-    <rect x="146" y="628" width="108" height="26" rx="6" fill="rgba(200,230,255,.8)" stroke="#fff" stroke-width="3"/>
+    <image href="assets/filtro-estratos.webp" x="0" y="0" width="400" height="720"/>
+    <rect class="lay" data-i="0" x="60" y="40" width="300" height="80" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="1" x="60" y="120" width="300" height="70" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="2" x="60" y="190" width="300" height="70" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="3" x="60" y="260" width="300" height="80" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="4" x="60" y="340" width="300" height="100" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="5" x="60" y="440" width="300" height="190" fill="#fff" fill-opacity="0"/>
     <g fill="#7fc4f2"><path class="drip" d="M200 662c0 0-8 10-8 15a8 8 0 0016 0c0-5-8-15-8-15z"/><path class="drip" style="animation-delay:.6s" d="M182 662c0 0-6 8-6 12a6 6 0 0012 0c0-4-6-12-6-12z"/><path class="drip" style="animation-delay:1.2s" d="M218 662c0 0-6 8-6 12a6 6 0 0012 0c0-4-6-12-6-12z"/></g>
   </svg>
   <div id="flabs"></div>
