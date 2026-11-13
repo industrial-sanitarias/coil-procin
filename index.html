@@ -192,6 +192,26 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 
 /* S10 caudal */
 #s10 svg.gauge{position:absolute;left:830px;top:150px}
+#ag .phone{top:165px;width:280px;height:580px;border-radius:46px;padding:12px}
+#ag .phone .scr{border-radius:36px}
+#ag .phone video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+#ag .p1{left:70px}#ag .p2{left:385px}
+#ag .vl{top:760px;width:280px;text-align:center;font-size:17px;font-weight:700;color:#1c2533;padding:9px 12px}
+#ag .vl span{color:var(--pt)}
+#ag .stp{left:730px;top:200px;width:800px;display:flex;flex-direction:column;gap:12px}
+#ag .stp .pill{display:flex;align-items:center;gap:16px;font-size:18px;padding:14px 18px}
+#ag .stp .n{flex:none;width:42px;height:42px;border-radius:50%;background:#1f4f8f;color:#fff;font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center}
+#ag .stp .pt{display:block;color:var(--pt);font-size:15px;margin-top:2px}
+#ag .calc{left:730px;top:540px;width:390px;padding:22px 24px;text-align:center}
+#ag .calc .k{font-size:15px;font-weight:700;color:#1f4f8f;letter-spacing:.04em}
+#ag .calc .eq{font-size:30px;font-weight:800;color:#1c2533;margin:10px 0 4px}
+#ag .calc .eq b{color:#e5584f}
+#ag .calc p{font-size:15px;color:#333}#ag .calc p span{display:block;color:var(--pt)}
+#ag .qr{left:1140px;top:540px;width:390px;padding:18px;display:flex;gap:16px;align-items:center}
+#ag .qr img{width:150px;height:150px;border-radius:10px;background:#fff;flex:none}
+#ag .qr h3{font-size:19px;line-height:1.2}#ag .qr h3 span{display:block;color:var(--pt);font-size:16px}
+#ag .qr p{font-size:13px;margin-top:8px;color:#333;word-break:break-all}
+#ag .ft{left:730px;top:760px;width:800px;font-size:15px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.4)}
 #s10 .ctrl{left:70px;top:220px;width:620px;padding:30px 34px;border-radius:28px}
 #s10 .ctrl h3{font-size:26px;margin-bottom:6px}
 #s10 .ctrl h3 span{color:var(--pt);font-size:20px;display:block}
@@ -580,6 +600,23 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
     <text x="350" y="575" text-anchor="middle" font-family="Inter" font-weight="700" font-size="34" fill="#fff">L/MIN</text>
   </svg>
   <div class="abs ex a" style="--d:3">Ejemplo inicial: 4 L en 2 min (no es un resultado medido) · Exemplo, não é um resultado medido</div>
+</section>
+
+<!-- 10b -->
+<section class="slide g2" id="ag" data-notes="<b>¿Cuánta agua se va en tu ducha? (3 min).</b> Se mostró a los estudiantes un video animado (español y portugués) que explica cuánta agua se usa al ducharse o lavar la loza, con un ejercicio para calcular litros. Luego respondieron la encuesta del QR. Reproducir uno de los videos y comentar el cálculo.">
+  <h2 class="t a" style="left:730px">Agua en casa: <b>Medir el Consumo</b><span class="pt">Água em casa: Medir o Consumo</span></h2>
+  <div class="phone p1 a" style="--d:1"><div class="scr"><div class="notch"></div><video src="assets/video-agua-es.mp4" poster="assets/video-agua-es.jpg" controls playsinline preload="none"></video></div></div>
+  <div class="phone p2 a" style="--d:2"><div class="scr"><div class="notch"></div><video src="assets/video-agua-pt.mp4" poster="assets/video-agua-pt.jpg" controls playsinline preload="none"></video></div></div>
+  <div class="abs pill vl a" style="left:70px;--d:1">Video en español <span>· 1:23</span></div>
+  <div class="abs pill vl a" style="left:385px;--d:2">Vídeo em português <span>· 1:33</span></div>
+  <div class="abs stp">
+    <div class="pill a" style="--d:2"><div class="n">1</div><div><b>Video animado:</b> cuánta agua gasta una ducha o lavar la loza, según los minutos.<span class="pt">Vídeo animado: quanta água gasta um banho ou lavar a louça, conforme os minutos.</span></div></div>
+    <div class="pill a" style="--d:3"><div class="n">2</div><div><b>Ejercicio:</b> los estudiantes calcularon los litros con el caudal y el tiempo (V = Q × t).<span class="pt">Exercício: os estudantes calcularam os litros com a vazão e o tempo.</span></div></div>
+    <div class="pill a" style="--d:4"><div class="n">3</div><div><b>Encuesta:</b> estudiantes de Chile y Brasil respondieron cuánto tardan en ducharse.<span class="pt">Pesquisa: estudantes do Chile e do Brasil responderam quanto tempo demoram no banho.</span></div></div>
+  </div>
+  <div class="abs glass calc a" style="--d:5"><div class="k">EJERCICIO DEL VIDEO · EXERCÍCIO</div><div class="eq">12 L/min × 8 min = <b>96 L</b></div><p>≈ 5 bidones de 20 litros<span>≈ 5 galões de 20 litros</span></p></div>
+  <div class="abs glass qr a" style="--d:6"><img src="assets/encuesta/qr.png" alt="QR encuesta"><div><h3>¿Cuánto tardas en ducharte?<span>Quanto tempo você demora no banho?</span></h3><p>forms.gle/d8Ld6UnoeggAwV1u6</p></div></div>
+  <div class="abs ft a" style="--d:7">Una ducha común puede gastar más de 10 litros por minuto: <b>cada minuto cuenta</b> · Cada minuto conta</div>
 </section>
 
 <!-- 11 -->
