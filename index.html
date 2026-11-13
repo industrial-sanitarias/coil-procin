@@ -173,7 +173,7 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 #s8 .warn p span{display:block;color:var(--pt);font-size:17px;margin-top:6px}
 
 /* S9 filtro */
-#s9 svg.bottle{position:absolute;left:470px;top:150px}
+#s9 svg.bottle{position:absolute;left:480px;top:168px}
 #s9 .lab{position:absolute;left:880px;display:flex;align-items:center;cursor:pointer}
 #s9 .lab .ln{width:110px;height:2px;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);position:relative}
 #s9 .lab .ln::before{content:"";position:absolute;left:-6px;top:-5px;width:12px;height:12px;border-radius:50%;background:#fff}
@@ -532,15 +532,15 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 <!-- 9 -->
 <section class="slide g5" id="s9" data-notes="<b>Filtro de estratos (4 min).</b> Hacer clic en cada etiqueta o capa y preguntar al curso su función antes de leerla. Montaje desde la salida hacia arriba.">
   <h2 class="t c a">Proyecto Práctico: <b>Filtro de Estratos</b><span class="pt">Projeto Prático: Filtro de Camadas</span></h2>
-  <svg class="bottle a" style="--d:1" width="400" height="720" viewBox="0 0 400 720">
-    <image href="assets/filtro-estratos.webp" x="0" y="0" width="400" height="720"/>
-    <rect class="lay" data-i="0" x="60" y="40" width="300" height="80" fill="#fff" fill-opacity="0"/>
-    <rect class="lay" data-i="1" x="60" y="120" width="300" height="70" fill="#fff" fill-opacity="0"/>
-    <rect class="lay" data-i="2" x="60" y="190" width="300" height="70" fill="#fff" fill-opacity="0"/>
-    <rect class="lay" data-i="3" x="60" y="260" width="300" height="80" fill="#fff" fill-opacity="0"/>
-    <rect class="lay" data-i="4" x="60" y="340" width="300" height="100" fill="#fff" fill-opacity="0"/>
-    <rect class="lay" data-i="5" x="60" y="440" width="300" height="190" fill="#fff" fill-opacity="0"/>
-    <g fill="#7fc4f2"><path class="drip" d="M200 662c0 0-8 10-8 15a8 8 0 0016 0c0-5-8-15-8-15z"/><path class="drip" style="animation-delay:.6s" d="M182 662c0 0-6 8-6 12a6 6 0 0012 0c0-4-6-12-6-12z"/><path class="drip" style="animation-delay:1.2s" d="M218 662c0 0-6 8-6 12a6 6 0 0012 0c0-4-6-12-6-12z"/></g>
+  <svg class="bottle a" style="--d:1" width="380" height="703" viewBox="0 0 400 740">
+    <image href="assets/filtro-estratos.webp?v=2" x="0" y="0" width="400" height="740"/>
+    <rect class="lay" data-i="0" x="70" y="95" width="260" height="70" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="1" x="70" y="165" width="260" height="60" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="2" x="70" y="225" width="260" height="60" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="3" x="70" y="285" width="260" height="60" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="4" x="70" y="345" width="260" height="70" fill="#fff" fill-opacity="0"/>
+    <rect class="lay" data-i="5" x="70" y="415" width="260" height="150" fill="#fff" fill-opacity="0"/>
+    <g fill="#7fc4f2"><path class="drip" d="M200 620c0 0-6 8-6 12a6 6 0 0012 0c0-4-6-12-6-12z"/><path class="drip" style="animation-delay:.9s" d="M200 620c0 0-6 8-6 12a6 6 0 0012 0c0-4-6-12-6-12z"/></g>
   </svg>
   <div id="flabs"></div>
   <div class="abs glass info a" id="finfo" style="--d:2"></div>
@@ -792,12 +792,12 @@ function pick(k){[...zt.querySelectorAll('img')].forEach((m,j)=>m.classList.togg
 selZ(0);
 
 /* S9 filtro */
-const L=[['Grava gruesa','Cascalho grosso','Distribuye el flujo y retiene los sólidos más grandes.','Distribui o fluxo e retém os sólidos maiores.',80],
- ['Grava fina','Cascalho fino','Retiene partículas que pasaron la primera capa.','Retém partículas que passaram pela primeira camada.',155],
- ['Arena gruesa','Areia grossa','Retiene partículas de mayor tamaño que atravesaron la grava.','Retém partículas maiores que atravessaram o cascalho.',225],
- ['Arena fina','Areia fina','Retiene partículas más pequeñas y reduce la turbiedad.','Retém partículas menores e reduz a turbidez.',300],
- ['Carbón activado','Carvão ativado','Adsorbe determinadas sustancias disueltas e impurezas.','Adsorve determinadas substâncias dissolvidas e impurezas.',390],
- ['Algodón / geotextil','Algodão / geotêxtil','Retiene partículas finas y evita que el material filtrante escape.','Retém partículas finas e evita a perda do material filtrante.',520]];
+const L=[['Grava gruesa','Cascalho grosso','Distribuye el flujo y retiene los sólidos más grandes.','Distribui o fluxo e retém os sólidos maiores.',141],
+ ['Grava fina','Cascalho fino','Retiene partículas que pasaron la primera capa.','Retém partículas que passaram pela primeira camada.',203],
+ ['Arena gruesa','Areia grossa','Retiene partículas de mayor tamaño que atravesaron la grava.','Retém partículas maiores que atravessaram o cascalho.',260],
+ ['Arena fina','Areia fina','Retiene partículas más pequeñas y reduce la turbiedad.','Retém partículas menores e reduz a turbidez.',317],
+ ['Carbón activado','Carvão ativado','Adsorbe determinadas sustancias disueltas e impurezas.','Adsorve determinadas substâncias dissolvidas e impurezas.',379],
+ ['Algodón / geotextil','Algodão / geotêxtil','Retiene partículas finas y evita que el material filtrante escape.','Retém partículas finas e evita a perda do material filtrante.',462]];
 const fl=document.getElementById('flabs'),fi=document.getElementById('finfo');
 L.forEach((l,i)=>{const d=document.createElement('div');d.className='lab a';d.style.cssText=`top:${150+l[4]-24}px;--d:${i+2}`;d.innerHTML=`<div class="ln"></div><div class="pill">${l[0]} / <span>${l[1]}</span></div>`;d.onclick=()=>selL(i);fl.appendChild(d)});
 document.querySelectorAll('#s9 .lay').forEach(r=>r.addEventListener('click',()=>selL(+r.dataset.i)));
