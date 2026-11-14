@@ -772,8 +772,8 @@ const N=[
  ['09/10','Aguas grises','Águas cinzas','drop','Clase expositiva sobre reutilización e infiltración de aguas grises y preparación de la segunda aula conjunta.'],
  ['16/10','Taller: filtro','Oficina: filtro','layers','Ejercicio práctico en el taller de Instalaciones Sanitarias: filtro por estratos con carbón activado.'],
  ['23/10','2ª aula conjunta','2ª aula conjunta','video','Segundo encuentro entre estudiantes de Chile y Brasil: compartimos la auditoría, los filtros y los ríos escondidos.'],
- ['10/11','Encuentro de cierre','Encerramento','check','Compartimos resultados, aprendizajes y próximos pasos.'],
- ['13–14/11','Maqueta y encuesta','Maquete e pesquisa','drop','Encuesta «¿Cuánto tardas en ducharte?», video COIL y maqueta final de filtrado y riego automático.']
+ ['13–14/11','Maqueta y encuesta','Maquete e pesquisa','drop','Encuesta «¿Cuánto tardas en ducharte?», video COIL y maqueta final de filtrado y riego automático.'],
+ ['Nov.','Encuentro de cierre','Encerramento','check','Hoy compartimos resultados, aprendizajes y próximos pasos.']
 ];
 const P=[[30,232],[290,312],[550,232],[810,312],[1070,232],[1330,312],[1330,560],[1070,640],[810,560],[550,640],[290,560],[30,640]];
 const nodes=document.getElementById('nodes'),det=document.getElementById('det');
@@ -795,9 +795,9 @@ const G=[
  ['Clase aguas grises e infiltración','Aula de águas cinzas',[10,5],[10,9]],
  ['Taller: filtro por estratos','Oficina: filtro por camadas',[10,5],[10,16]],
  ['2ª aula conjunta Chile – Brasil','2ª aula conjunta',[10,23],[10,23]],
- ['Encuentro de cierre','Encerramento',null,[11,10],'now'],
  ['Encuesta y video COIL','Pesquisa e vídeo COIL',null,[11,13]],
- ['Maqueta final y video','Maquete final e vídeo',null,[11,14]]
+ ['Maqueta final y video','Maquete final e vídeo',null,[11,14]],
+ ['Encuentro de cierre','Encerramento',null,[11,20],'now']
 ];
 const gt=document.getElementById('gantt');
 gt.innerHTML='<tr><th></th>'+months.map(m=>`<th>${m[0]}<span>${m[1]}</span></th>`).join('')+'</tr>'+G.map(g=>`<tr><td class="lab">${g[0]}<span>${g[1]}</span></td>${months.map(()=>'<td class="m"></td>').join('')}</tr>`).join('');
@@ -808,7 +808,7 @@ let ganttDone=false;window.drawGantt=()=>{if(ganttDone)return;ganttDone=true;con
   const base=host.offsetLeft;const add=(cls,px,lab)=>{const m=document.createElement('div');m.className='mk '+cls;m.style.left=(px-base)+'px';wrap.appendChild(m);if(lab){const l=document.createElement('div');l.className='lk lk-'+cls;l.style.left=(px-base)+'px';l.textContent=lab;wrap.appendChild(l)}};
   if(g[2]){const p=x(...g[2]),e=x(...g[3]);if(Math.abs(e-p)>4){const ln=document.createElement('div');ln.className='lnk';ln.style.left=(p-base)+'px';ln.style.width=(e-p)+'px';wrap.appendChild(ln);add('plan',p,(e-p)>44?String(g[2][1]).padStart(2,'0')+'/'+String(g[2][0]).padStart(2,'0'):'')}
    add('exe',e,String(g[3][1]).padStart(2,'0')+'/'+String(g[3][0]).padStart(2,'0'))}
-  else if(g[4]==='now')add('now',x(...g[3]),'10/11 · cierre');else add('exe',x(...g[3]),String(g[3][1]).padStart(2,'0')+'/'+String(g[3][0]).padStart(2,'0'));
+  else if(g[4]==='now')add('now',x(...g[3]),'cierre');else add('exe',x(...g[3]),String(g[3][1]).padStart(2,'0')+'/'+String(g[3][0]).padStart(2,'0'));
  })};
 
 /* S6 zonas */
