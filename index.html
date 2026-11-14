@@ -125,11 +125,11 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 #s4 .det{left:470px;top:800px;width:660px;padding:14px 22px;font-size:17px;line-height:1.35;border-radius:18px;text-align:center}
 
 /* S5 calendario */
-#s5 .cal{left:70px;top:222px;width:1460px;padding:24px 30px;border-radius:24px}
+#s5 .cal{left:70px;top:215px;width:1460px;padding:16px 30px;border-radius:24px}
 #s5 table{width:100%;border-collapse:separate;border-spacing:0}
 #s5 th{font-size:17px;font-weight:700;padding:8px 0;text-align:center;color:#3b4656;border-bottom:2px solid #d8e1ea}
 #s5 th span{display:block;color:var(--pt);font-size:14px}
-#s5 td{height:62px;border-bottom:1px solid #e3e9ef;position:relative}
+#s5 td{height:51px;border-bottom:1px solid #e3e9ef;position:relative}
 #s5 td.lab{width:300px;font-size:17px;font-weight:600;line-height:1.15;padding-right:10px}
 #s5 td.lab span{display:block;color:var(--pt);font-size:14px;font-weight:600}
 #s5 td.m{border-left:1px dashed #dbe3eb}
@@ -330,6 +330,19 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 .pol .cp{position:absolute;left:0;right:0;bottom:7px;text-align:center;font-size:15px;font-weight:600}
 .pol .cp span{color:var(--pt)}
 .tagp{display:inline-block;background:#fff;border-radius:30px;padding:6px 14px;font-weight:700;font-size:15px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+#pd1 .pol.c1{left:70px;top:190px;width:330px;height:300px}
+#pd1 .pol.c2{left:830px;top:190px;width:330px;height:300px}
+#pd1 .cd{top:190px;width:340px;padding:18px 20px;border-radius:24px}
+#pd1 .cd.cl{left:430px}#pd1 .cd.br{left:1190px}
+#pd1 .cd h4{display:flex;align-items:center;gap:10px;font-size:22px;flex-wrap:wrap}#pd1 .cd h4 small{width:100%;font-size:14px;color:var(--pt);font-weight:600}
+#pd1 .cd p{font-size:15.5px;line-height:1.35;margin-top:12px;color:#1c2533}#pd1 .cd p span{display:block;font-size:13.5px;color:var(--pt);margin-top:3px}
+#pd1 .quote2{left:70px;top:560px;width:1460px;background:linear-gradient(135deg,#1f4f8f,#2a74c4);color:#fff;border-radius:24px;padding:22px 30px;font-size:24px;font-weight:600;line-height:1.35;box-shadow:0 14px 30px rgba(18,35,70,.3)}
+#pd1 .quote2 small{display:block;font-size:16px;font-weight:500;margin-top:8px;opacity:.9}
+#pd1 .kp2{left:70px;top:735px;display:flex;gap:16px;align-items:center}
+#pd1 .kp2 .glass{padding:12px 22px;border-radius:20px;font-weight:700;font-size:16px;display:flex;align-items:baseline;gap:8px}
+#pd1 .kp2 .glass b{font-size:34px;font-weight:800;background:linear-gradient(135deg,var(--coral),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+#pd1 .kp2 .glass span{color:var(--pt);font-size:14px;font-weight:600}
+#pd1 .kp2 a{background:#fff;color:#1c2533;text-decoration:none;font-weight:800;padding:14px 24px;border-radius:30px;box-shadow:0 8px 20px rgba(0,0,0,.15)}#pd1 .kp2 a span{display:block;font-size:13px;color:var(--pt);font-weight:600}
 #pd1 .map{left:70px;top:190px;width:760px;height:560px;border-radius:30px;padding:0;overflow:hidden}
 #pd1 .map svg{width:100%;height:100%}
 #pd1 .kp{left:880px;top:190px;width:650px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -465,63 +478,18 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 
 
 <!-- PADLET 1 -->
-<section class="slide g4" id="pd1" data-notes="<b>Padlet (2 min).</b> El mural colaborativo reúne 26 publicaciones: 20 desde San Felipe y 6 desde São Paulo. Mostrar el mapa y recorrer la línea de tiempo. Si hay internet, abrir el Padlet con el botón.">
+<section class="slide g4" id="pd1" data-notes="<b>Padlet (3 min).</b> El mural colaborativo reúne 26 publicaciones: 20 desde San Felipe y 6 desde São Paulo. Chile: auditoría de baños y taller del filtro. Brasil: los ríos escondidos de São Paulo e inventario de bebederos. Si hay internet, abrir el Padlet con el botón.">
   <h2 class="t a">Padlet: <b>Nuestro Mural Colaborativo</b><span class="pt">Padlet: Nosso Mural Colaborativo</span></h2>
-  <div class="abs glass map a" style="--d:1"><svg viewBox="0 0 760 560">
-    <defs><linearGradient id="sea" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cfe9f5"/><stop offset="1" stop-color="#9fd0ea"/></linearGradient>
-    <linearGradient id="arc" x1="0" x2="1"><stop offset="0" stop-color="#d9643a"/><stop offset="1" stop-color="#2a74c4"/></linearGradient></defs>
-    <rect width="760" height="560" fill="url(#sea)"/>
-    <path d="M300 20 C 420 10, 560 40, 640 110 C 720 180, 700 260, 640 300 C 600 330, 560 360, 520 420 C 480 480, 420 520, 360 545 C 330 555, 300 540, 290 500 C 280 440, 300 380, 290 320 C 280 260, 240 220, 250 160 C 258 100, 260 40, 300 20 Z" fill="#f6efe0" stroke="#d9cbb0" stroke-width="3"/>
-    <path d="M300 20 C 290 60, 285 100, 282 150 C 279 220, 288 300, 300 380 C 306 430, 312 480, 318 545" stroke="#e7d8bd" stroke-width="2" fill="none" stroke-dasharray="6 6"/>
-    <text x="215" y="380" font-family="Inter" font-weight="800" font-size="26" fill="#9a8a70" transform="rotate(-80 215 380)">CHILE</text>
-    <text x="470" y="170" font-family="Inter" font-weight="800" font-size="34" fill="#9a8a70">BRASIL</text>
-    <path d="M300 395 C 380 300, 520 300, 585 330" stroke="url(#arc)" stroke-width="6" fill="none" stroke-dasharray="12 10"><animate attributeName="stroke-dashoffset" from="44" to="0" dur="1.2s" repeatCount="indefinite"/></path>
-    <g transform="translate(300 395)"><circle r="34" fill="#d52b1e" opacity=".18"><animate attributeName="r" values="22;40;22" dur="2.2s" repeatCount="indefinite"/></circle><path d="M0 0 C -26 -30, -26 -62, 0 -62 C 26 -62, 26 -30, 0 0z" fill="#e0257a"/><text y="-36" text-anchor="middle" font-family="Inter" font-weight="800" font-size="22" fill="#fff">20</text></g>
-    <g transform="translate(585 330)"><circle r="34" fill="#009c3b" opacity=".18"><animate attributeName="r" values="22;40;22" dur="2.2s" begin=".6s" repeatCount="indefinite"/></circle><path d="M0 0 C -26 -30, -26 -62, 0 -62 C 26 -62, 26 -30, 0 0z" fill="#f05a28"/><text y="-36" text-anchor="middle" font-family="Inter" font-weight="800" font-size="22" fill="#fff">6</text></g>
-    <g font-family="Inter"><rect x="70" y="410" width="215" height="58" rx="14" fill="#fff"/><text x="86" y="436" font-weight="800" font-size="18" fill="#1c2533">San Felipe, Chile</text><text x="86" y="458" font-weight="600" font-size="14" fill="#1f4f8f">Escuela Industrial GRC</text>
-    <rect x="470" y="345" width="250" height="58" rx="14" fill="#fff"/><text x="486" y="371" font-weight="800" font-size="18" fill="#1c2533">São Paulo, Brasil</text><text x="486" y="393" font-weight="600" font-size="14" fill="#1f4f8f">Etec Dra. Maria Augusta Saraiva</text></g>
-  </svg></div>
-  <div class="abs kp">
-    <div class="glass a" style="--d:2"><div class="n">26</div><b>publicaciones</b><span>publicações</span></div>
-    <div class="glass a" style="--d:3"><div class="n">+25</div><b>colaboradores</b><span>colaboradores</span></div>
-  </div>
-  <div class="abs tl">
-    <div class="ti a" style="--d:3"><div class="d">11/08</div><div>Compartimos la presentación del proyecto.<span class="pt">Compartilhamos a apresentação do projeto.</span></div></div>
-    <div class="ti a" style="--d:4"><div class="d">10/10</div><div>Adilson abre el mural: los ríos escondidos de São Paulo.<span class="pt">Adilson abre o mural: os rios escondidos de São Paulo.</span></div></div>
-    <div class="ti a" style="--d:5"><div class="d">14/10</div><div>Estudiantes de Brasil publican bebederos, baños y planos.<span class="pt">Estudantes do Brasil publicam bebedouros, banheiros e plantas.</span></div></div>
-    <div class="ti a" style="--d:6"><div class="d">06/11</div><div>Estudiantes de Chile publican la auditoría y el taller del filtro.<span class="pt">Estudantes do Chile publicam a auditoria e a oficina do filtro.</span></div></div>
-  </div>
-  <div class="abs go a" style="--d:7"><a href="https://padlet.com/crizamorad/proyecto-colaborativo-coil-odqa1d41n6wa4yzo" target="_blank" rel="noopener">Abrir el Padlet ↗</a><span>Abrir o mural completo</span></div>
-</section>
-
-<!-- PADLET 2 -->
-<section class="slide g3" id="pd2" data-notes="<b>Desde Brasil (2 min).</b> Adilson abrió el mural con un gancho distinto: la Etec está entre ríos escondidos (canalizados) que ayudaron a construir São Paulo. El agua de la zona llega desde el Sistema Cantareira.">
-  <h2 class="t a">Desde Brasil: <b>Los Ríos Escondidos</b><span class="pt">Do Brasil: Os Rios Escondidos</span></h2>
-  <div class="pol zoom m1 a" style="--d:1;transform:rotate(-2deg)" data-cap="Ríos cerca de la Etec · Rios perto da Etec"><img loading="lazy" decoding="async" src="assets/padlet/p01_0.jpg" alt="Ríos cerca de la Etec"><div class="cp">Ríos cerca de la Etec · <span>Rios perto da Etec</span></div></div>
-  <div class="pol zoom m2 a" style="--d:2;transform:rotate(2deg)" data-cap="Sistema Cantareira · Sistema Cantareira"><img loading="lazy" decoding="async" src="assets/padlet/p01_2.jpg" alt="Sistema Cantareira"><div class="cp">Sistema Cantareira · <span>Sistema Cantareira</span></div></div>
-  <div class="abs side">
-    <div class="pill a" style="--d:2">La Etec está entre ríos escondidos que ayudaron a construir São Paulo y que hoy influyen en el abastecimiento, las inundaciones y la calidad ambiental.<span class="pt">A Etec está entre rios escondidos que ajudaram a construir São Paulo e que influenciam o abastecimento, as enchentes e a qualidade ambiental.</span></div>
-    <div class="pill a" style="--d:3"><b>Microcuencas</b> de los arroyos Anhanguera y da Luz, del sistema del río Tietê, hoy casi totalmente canalizados.<span class="pt">Microbacias dos córregos Anhanguera e da Luz, do sistema do Tietê, hoje quase totalmente canalizados.</span></div>
-    <div class="pill a" style="--d:4"><b>Abastecimiento:</b> el agua de la escuela llega desde el Sistema Cantareira.<span class="pt">Abastecimento: a água da escola vem do Sistema Cantareira.</span></div>
-    <div class="quote a" style="--d:5">“Nosso projeto não é apenas sobre água. É sobre entender por que São Paulo escondeu seus rios e o que isso tem a ver com saúde ambiental.”<small>Nuestro proyecto no es solo sobre agua: es entender por qué São Paulo escondió sus ríos y qué tiene que ver con la salud ambiental. · Prof. Adilson Camacho</small></div>
-  </div>
-  <div class="abs src">Imágenes publicadas por el Prof. Adilson en el Padlet · Fuentes: GeoSampa/PMSP, ANA</div>
-</section>
-
-<!-- PADLET 3 -->
-<section class="slide g2" id="pd3" data-notes="<b>Estudiantes de Brasil (2 min).</b> El grupo de bebederos revisó los equipos de cada piso. Leer su conclusión en portugués y luego en español. Comentar que organizaron el inventario en cinco grupos.">
-  <h2 class="t w a">Estudiantes de Brasil: <b>Inventario en la Etec</b><span class="pt" style="color:#fff">Estudantes do Brasil: Inventário na Etec</span></h2>
-  <div class="abs row5">
-    <div class="pol zoom a" style="--d:1;transform:rotate(-1.5deg)" data-cap="Planta baja · Térreo"><img loading="lazy" decoding="async" src="assets/padlet/p06_0.jpg" alt="Planta baja"><div class="cp">Planta baja · <span>Térreo</span></div></div>
-    <div class="pol zoom a" style="--d:2;transform:rotate(1deg)" data-cap="No instalado · Não instalado"><img loading="lazy" decoding="async" src="assets/padlet/p06_1.jpg" alt="No instalado"><div class="cp">No instalado · <span>Não instalado</span></div></div>
-    <div class="pol zoom a" style="--d:3;transform:rotate(-1deg)" data-cap="2° piso · 2º andar"><img loading="lazy" decoding="async" src="assets/padlet/p06_2.jpg" alt="2° piso"><div class="cp">2° piso · <span>2º andar</span></div></div>
-    <div class="pol zoom a" style="--d:4;transform:rotate(1.5deg)" data-cap="3° piso · 3º andar"><img loading="lazy" decoding="async" src="assets/padlet/p06_3.jpg" alt="3° piso"><div class="cp">3° piso · <span>3º andar</span></div></div>
-    <div class="pol zoom a" style="--d:5;transform:rotate(-1deg)" data-cap="4° piso · 4º andar"><img loading="lazy" decoding="async" src="assets/padlet/p06_4.jpg" alt="4° piso"><div class="cp">4° piso · <span>4º andar</span></div></div>
-  </div>
-  <div class="abs glass concl a" style="--d:5"><div class="lb">GRUPO BEBEDOUROS · CONCLUSIÓN</div><p class="pt">“Apesar de alguns vazamentos, o funcionamento geral dos aparelhos foi bom e aparentemente não tem desperdício do uso da água.”</p><p>A pesar de algunas filtraciones, el funcionamiento general de los bebederos fue bueno y aparentemente no hay desperdicio de agua.</p></div>
-  <div class="abs glass grp a" style="--d:6"><h4>Inventario en 5 grupos<span>Inventário em 5 grupos</span></h4><ul>
-    <li>1 · Baños masculinos <span>· Banheiros masculinos</span></li><li>2 · Baños femeninos <span>· Banheiros femininos</span></li><li>3 · Bebederos <span>· Bebedouros</span></li><li>4 · Cantina/cocina <span>· Cantina/cozinha</span></li><li>5 · Áreas externas <span>· Áreas externas</span></li></ul></div>
-  <div class="pol zoom pl a" style="--d:7;transform:rotate(3deg)" data-cap="Dibujo de la planta del primer piso de la Etec · Desenho da planta do primeiro andar"><img loading="lazy" decoding="async" src="assets/padlet/p05_0.jpg" alt="Planta 1° piso"><div class="cp">Planta 1° piso · <span>Planta 1º andar</span></div></div>
+  <div class="pol zoom c1 a" style="--d:1;transform:rotate(-2deg)" data-cap="Estudiantes de Chile en el taller · Estudantes do Chile na oficina"><img loading="lazy" decoding="async" src="assets/padlet/p18_0.jpg" alt="Estudiantes de Chile"><div class="cp">San Felipe · <span>Chile</span></div></div>
+  <div class="abs glass cd cl a" style="--d:2"><h4><span class="flag" data-f="cl"></span> Desde Chile<small>Do Chile · 20 publicaciones</small></h4>
+    <p><b>Auditoría en terreno:</b> baños, urinarios, inodoros y lavamanos de la escuela.<span>Auditoria em campo: banheiros, mictórios, vasos e pias.</span></p>
+    <p><b>Taller del filtro:</b> harneado de arena y montaje por capas.<span>Oficina do filtro: peneiramento da areia e montagem por camadas.</span></p></div>
+  <div class="pol zoom c2 a" style="--d:3;transform:rotate(2deg)" data-cap="Ríos cerca de la Etec · Rios perto da Etec"><img loading="lazy" decoding="async" src="assets/padlet/p01_0.jpg" alt="Ríos cerca de la Etec"><div class="cp">São Paulo · <span>Brasil</span></div></div>
+  <div class="abs glass cd br a" style="--d:4"><h4><span class="flag" data-f="br"></span> Desde Brasil<small>Do Brasil · 6 publicaciones</small></h4>
+    <p><b>Los ríos escondidos:</b> la Etec está entre arroyos canalizados del sistema del Tietê.<span>Os rios escondidos: a Etec está entre córregos canalizados do Tietê.</span></p>
+    <p><b>Inventario de bebederos:</b> buen funcionamiento general, con algunas fugas.<span>Inventário de bebedouros: bom funcionamento geral, com alguns vazamentos.</span></p></div>
+  <div class="abs quote2 a" style="--d:5">“Nosso projeto não é apenas sobre água. É sobre entender por que São Paulo escondeu seus rios.”<small>Nuestro proyecto no es solo sobre agua: es entender por qué São Paulo escondió sus ríos. · Prof. Adilson</small></div>
+  <div class="abs kp2 a" style="--d:6"><div class="glass"><b>26</b>publicaciones<span>publicações</span></div><div class="glass"><b>+25</b>colaboradores<span>colaboradores</span></div><a href="https://padlet.com/crizamorad/proyecto-colaborativo-coil-odqa1d41n6wa4yzo" target="_blank" rel="noopener">Abrir el Padlet ↗<span>Abrir o mural</span></a></div>
 </section>
 
 <!-- 6 -->
@@ -635,7 +603,7 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
   </div>
   <div class="abs flow">
     <div class="fs a" style="--d:4"><div class="ic" data-i="layers"></div><div class="pill">5 filtros por estratos<span>5 filtros por camadas</span></div></div><div class="arw a" style="--d:4">›</div>
-    <div class="fs a" style="--d:5"><div class="ic" data-i="tank"></div><div class="pill">Estanque 50 L<span>Reservatório 50 L</span></div></div><div class="arw a" style="--d:5">›</div>
+    <div class="fs a" style="--d:5"><div class="ic" data-i="tank"></div><div class="pill">Estanque acrílico<span>Reservatório de acrílico</span></div></div><div class="arw a" style="--d:5">›</div>
     <div class="fs a" style="--d:6"><div class="ic" data-i="pump"></div><div class="pill">Bomba 0,5 HP + press control<span>Bomba + pressostato</span></div></div><div class="arw a" style="--d:6">›</div>
     <div class="fs a" style="--d:7"><div class="ic" data-i="plant"></div><div class="pill">Riego por microaspersión<span>Irrigação por microaspersão</span></div></div>
   </div>
@@ -653,7 +621,7 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
     <div class="glass kpi a" style="--d:6"><div class="n">1</div><div><b>módulo de reutilización diseñado</b><span>módulo de reúso projetado</span></div></div>
   </div>
   <div class="abs comp">
-    <div class="pill a" style="--d:7"><div class="ic" data-i="tool"></div><div><b>Técnico</b><p>Auditoría, planos, filtro y caudal</p></div></div>
+    <div class="pill a" style="--d:7"><div class="ic" data-i="tool"></div><div><b>Técnico</b><p>Auditoría, planos, filtro y riego automático</p></div></div>
     <div class="pill a" style="--d:8"><div class="ic" data-i="globe"></div><div><b>Intercultural</b><p>Aulas conjuntas y dos idiomas</p></div></div>
     <div class="pill a" style="--d:9"><div class="ic" data-i="laptop"></div><div><b>Digital</b><p>Teams, Drive y 26 posts en Padlet</p></div></div>
   </div>
@@ -781,7 +749,9 @@ const G=[
  ['1ª aula conjunta Chile – Brasil','1ª aula conjunta',[8,26],[9,2]],
  ['Clase aguas grises e infiltración','Aula de águas cinzas',[10,5],[10,9]],
  ['Taller: filtro por estratos','Oficina: filtro por camadas',[10,5],[10,16]],
- ['Encuentro de cierre','Encerramento',null,[11,10],'now']
+ ['Encuentro de cierre','Encerramento',null,[11,10],'now'],
+ ['Encuesta y video COIL','Pesquisa e vídeo COIL',null,[11,13]],
+ ['Maqueta final y video','Maquete final e vídeo',null,[11,14]]
 ];
 const gt=document.getElementById('gantt');
 gt.innerHTML='<tr><th></th>'+months.map(m=>`<th>${m[0]}<span>${m[1]}</span></th>`).join('')+'</tr>'+G.map(g=>`<tr><td class="lab">${g[0]}<span>${g[1]}</span></td>${months.map(()=>'<td class="m"></td>').join('')}</tr>`).join('');
@@ -792,7 +762,7 @@ let ganttDone=false;window.drawGantt=()=>{if(ganttDone)return;ganttDone=true;con
   const base=host.offsetLeft;const add=(cls,px,lab)=>{const m=document.createElement('div');m.className='mk '+cls;m.style.left=(px-base)+'px';wrap.appendChild(m);if(lab){const l=document.createElement('div');l.className='lk';l.style.left=(px-base)+'px';l.textContent=lab;wrap.appendChild(l)}};
   if(g[2]){const p=x(...g[2]),e=x(...g[3]);if(Math.abs(e-p)>4){const ln=document.createElement('div');ln.className='lnk';ln.style.left=(p-base)+'px';ln.style.width=(e-p)+'px';wrap.appendChild(ln);add('plan',p,(e-p)>44?String(g[2][1]).padStart(2,'0')+'/'+String(g[2][0]).padStart(2,'0'):'')}
    add('exe',e,String(g[3][1]).padStart(2,'0')+'/'+String(g[3][0]).padStart(2,'0'))}
-  else add('now',x(...g[3]),'cierre');
+  else if(g[4]==='now')add('now',x(...g[3]),'cierre');else add('exe',x(...g[3]),String(g[3][1]).padStart(2,'0')+'/'+String(g[3][0]).padStart(2,'0'));
  })};
 
 /* S6 zonas */
