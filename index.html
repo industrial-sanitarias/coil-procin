@@ -115,23 +115,23 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 /* S4 río */
 #s4 svg.river{position:absolute;left:0;top:0;z-index:0}
 #s4 .node{position:absolute;display:flex;align-items:center;cursor:pointer;z-index:2}
-#s4 .node .ic{width:96px;height:96px;transition:transform .2s}
+#s4 .node .ic{width:76px;height:76px;transition:transform .2s;flex:none}
 #s4 .node:hover .ic{transform:scale(1.08)}
-#s4 .node .card{background:#fff;border-radius:16px;box-shadow:0 10px 24px rgba(18,35,70,.22);padding:10px 16px 10px 22px;margin-left:-14px;width:250px}
-#s4 .node .d{font-size:14px;font-weight:700;color:var(--coral)}
-#s4 .node .es{font-size:18px;font-weight:700;line-height:1.15}
-#s4 .node .p{font-size:15px;font-weight:600;color:var(--pt);line-height:1.15}
+#s4 .node .card{background:#fff;border-radius:14px;box-shadow:0 10px 24px rgba(18,35,70,.22);padding:8px 12px 8px 20px;margin-left:-12px;width:170px}
+#s4 .node .d{font-size:13px;font-weight:700;color:var(--coral)}
+#s4 .node .es{font-size:15.5px;font-weight:700;line-height:1.15}
+#s4 .node .p{font-size:12.5px;font-weight:600;color:var(--pt);line-height:1.15}
 #s4 .node.on .card{outline:3px solid var(--teal)}
 #s4 .det{left:470px;top:800px;width:660px;padding:14px 22px;font-size:17px;line-height:1.35;border-radius:18px;text-align:center}
 
 /* S5 calendario */
-#s5 .cal{left:70px;top:215px;width:1460px;padding:16px 30px;border-radius:24px}
+#s5 .cal{left:70px;top:210px;width:1460px;padding:10px 30px;border-radius:24px}
 #s5 table{width:100%;border-collapse:separate;border-spacing:0}
 #s5 th{font-size:17px;font-weight:700;padding:8px 0;text-align:center;color:#3b4656;border-bottom:2px solid #d8e1ea}
 #s5 th span{display:block;color:var(--pt);font-size:14px}
-#s5 td{height:51px;border-bottom:1px solid #e3e9ef;position:relative}
-#s5 td.lab{width:300px;font-size:17px;font-weight:600;line-height:1.15;padding-right:10px}
-#s5 td.lab span{display:block;color:var(--pt);font-size:14px;font-weight:600}
+#s5 td{height:40px;border-bottom:1px solid #e3e9ef;position:relative}
+#s5 td.lab{width:300px;font-size:15px;font-weight:600;line-height:1.15;padding-right:10px}
+#s5 td.lab span{display:block;color:var(--pt);font-size:12px;font-weight:600}
 #s5 td.m{border-left:1px dashed #dbe3eb}
 #s5 .mk{position:absolute;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;z-index:2}
 #s5 .plan{border:3px solid #e58aa0;background:#fff}
@@ -139,7 +139,7 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 #s5 .now{background:var(--red);animation:pulse 1.4s infinite}
 @keyframes pulse{50%{box-shadow:0 0 0 10px rgba(214,69,65,.2)}}
 #s5 .lnk{position:absolute;top:50%;height:4px;margin-top:-2px;background:repeating-linear-gradient(90deg,#e58aa0 0 6px,transparent 6px 10px);z-index:1}
-#s5 .lk{position:absolute;font-size:12px;font-weight:700;color:#7a8696;top:6px;white-space:nowrap;transform:translateX(-50%)}
+#s5 .lk{position:absolute;font-size:12px;font-weight:700;color:#5d6a7a;top:50%;white-space:nowrap;transform:translate(16px,-50%)}#s5 .lk.lk-plan{transform:translate(calc(-100% - 16px),-50%);color:#c46a82}#s5 .lk.lk-now{color:#d64541}
 #s5 .leg{right:70px;top:176px;display:flex;gap:30px;color:#fff;font-weight:600;font-size:18px;text-shadow:0 1px 6px rgba(0,0,0,.35);align-items:center}
 #s5 .leg i{display:inline-block;width:20px;height:20px;border-radius:50%;vertical-align:-4px;margin-right:8px}
 
@@ -765,13 +765,17 @@ const N=[
  ['21/05','Reunión docente','Reunião docente','pres','Adilson y Cristóbal preparan la primera presentación del proyecto ante las coordinadoras y los demás profesores.'],
  ['27/05','Presentación COIL','Apresentação COIL','globe','Presentamos el proyecto «Medición y optimización del consumo de agua con enfoque territorial y de salud ambiental».'],
  ['06/08','Drive y Padlet','Drive e Padlet','cloud','Creamos un Google Drive conjunto y un Padlet para que estudiantes y docentes suban evidencias.'],
+ ['11/08','Preparación aula','Preparação da aula','pres','Los docentes planifican la primera aula conjunta entre estudiantes de ambos países.'],
  ['02/09','1ª aula conjunta','1ª aula conjunta','video','Primer encuentro entre estudiantes de Chile y Brasil por Teams. Se reprogramó desde el 26/08 por problemas de conexión.'],
- ['Terreno','Auditoría hídrica','Auditoria hídrica','clip','Cuantificamos artefactos y puntos de consumo en baños, cocina y áreas de riego, y levantamos planos.'],
- ['09/10','Clase de aguas grises','Aula de águas cinzas','drop','Clase expositiva sobre reutilización e infiltración de aguas grises y preparación de la segunda aula conjunta.'],
+ ['16/09','Reunión de seguimiento','Reunião de acompanhamento','pres','Reunión entre docentes para revisar avances y coordinar la etapa técnica del proyecto.'],
+ ['30/09','Auditoría hídrica','Auditoria hídrica','clip','Cuantificamos artefactos y puntos de consumo en baños, cocina y áreas de riego, y levantamos planos.'],
+ ['09/10','Aguas grises','Águas cinzas','drop','Clase expositiva sobre reutilización e infiltración de aguas grises y preparación de la segunda aula conjunta.'],
  ['16/10','Taller: filtro','Oficina: filtro','layers','Ejercicio práctico en el taller de Instalaciones Sanitarias: filtro por estratos con carbón activado.'],
- ['Nov.','Encuentro de cierre','Encerramento','check','Hoy compartimos resultados, aprendizajes y próximos pasos.']
+ ['23/10','2ª aula conjunta','2ª aula conjunta','video','Segundo encuentro entre estudiantes de Chile y Brasil: compartimos la auditoría, los filtros y los ríos escondidos.'],
+ ['10/11','Encuentro de cierre','Encerramento','check','Compartimos resultados, aprendizajes y próximos pasos.'],
+ ['13–14/11','Maqueta y encuesta','Maquete e pesquisa','drop','Encuesta «¿Cuánto tardas en ducharte?», video COIL y maqueta final de filtrado y riego automático.']
 ];
-const P=[[70,250],[440,320],[830,250],[1210,320],[1180,560],[800,620],[430,560],[70,640]];
+const P=[[30,232],[290,312],[550,232],[810,312],[1070,232],[1330,312],[1330,560],[1070,640],[810,560],[550,640],[290,560],[30,640]];
 const nodes=document.getElementById('nodes'),det=document.getElementById('det');
 N.forEach((n,i)=>{const d=document.createElement('div');d.className='node a';d.style.cssText=`left:${P[i][0]}px;top:${P[i][1]}px;--d:${i+1}`;
  d.innerHTML=`<div class="ic">${I[n[3]]}</div><div class="card"><div class="d">${n[0]}</div><div class="es">${n[1]}</div><div class="p">${n[2]}</div></div>`;d.onclick=()=>selN(i);nodes.appendChild(d)});
@@ -786,8 +790,11 @@ const G=[
  ['Drive conjunto y Padlet','Drive conjunto e Padlet',[8,6],[8,6]],
  ['Preparación aula conjunta','Preparação da aula conjunta',[8,10],[8,11]],
  ['1ª aula conjunta Chile – Brasil','1ª aula conjunta',[8,26],[9,2]],
+ ['Reunión docente de seguimiento','Reunião de acompanhamento',[9,16],[9,16]],
+ ['Auditoría hídrica en terreno','Auditoria hídrica em campo',[9,30],[9,30]],
  ['Clase aguas grises e infiltración','Aula de águas cinzas',[10,5],[10,9]],
  ['Taller: filtro por estratos','Oficina: filtro por camadas',[10,5],[10,16]],
+ ['2ª aula conjunta Chile – Brasil','2ª aula conjunta',[10,23],[10,23]],
  ['Encuentro de cierre','Encerramento',null,[11,10],'now'],
  ['Encuesta y video COIL','Pesquisa e vídeo COIL',null,[11,13]],
  ['Maqueta final y video','Maquete final e vídeo',null,[11,14]]
@@ -798,10 +805,10 @@ let ganttDone=false;window.drawGantt=()=>{if(ganttDone)return;ganttDone=true;con
  const x=(m,d)=>{const r=rows[0].cells;const c=r[1+m-5];return c.offsetLeft+c.offsetWidth*(d-0.5)/31};
  rows.forEach((r,k)=>{const g=G[k];const host=r.cells[1];host.style.position='relative';
   const wrap=document.createElement('div');wrap.style.cssText='position:absolute;left:0;top:0;height:100%;width:0';host.appendChild(wrap);
-  const base=host.offsetLeft;const add=(cls,px,lab)=>{const m=document.createElement('div');m.className='mk '+cls;m.style.left=(px-base)+'px';wrap.appendChild(m);if(lab){const l=document.createElement('div');l.className='lk';l.style.left=(px-base)+'px';l.textContent=lab;wrap.appendChild(l)}};
+  const base=host.offsetLeft;const add=(cls,px,lab)=>{const m=document.createElement('div');m.className='mk '+cls;m.style.left=(px-base)+'px';wrap.appendChild(m);if(lab){const l=document.createElement('div');l.className='lk lk-'+cls;l.style.left=(px-base)+'px';l.textContent=lab;wrap.appendChild(l)}};
   if(g[2]){const p=x(...g[2]),e=x(...g[3]);if(Math.abs(e-p)>4){const ln=document.createElement('div');ln.className='lnk';ln.style.left=(p-base)+'px';ln.style.width=(e-p)+'px';wrap.appendChild(ln);add('plan',p,(e-p)>44?String(g[2][1]).padStart(2,'0')+'/'+String(g[2][0]).padStart(2,'0'):'')}
    add('exe',e,String(g[3][1]).padStart(2,'0')+'/'+String(g[3][0]).padStart(2,'0'))}
-  else if(g[4]==='now')add('now',x(...g[3]),'cierre');else add('exe',x(...g[3]),String(g[3][1]).padStart(2,'0')+'/'+String(g[3][0]).padStart(2,'0'));
+  else if(g[4]==='now')add('now',x(...g[3]),'10/11 · cierre');else add('exe',x(...g[3]),String(g[3][1]).padStart(2,'0')+'/'+String(g[3][0]).padStart(2,'0'));
  })};
 
 /* S6 zonas */
