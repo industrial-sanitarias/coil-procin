@@ -283,6 +283,16 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 #s13 .hint{right:70px;top:150px;color:#fff;font-size:16px;font-weight:600;text-shadow:0 1px 6px rgba(0,0,0,.4)}
 
 /* S14 cierre */
+#s14 .vid{left:70px;top:200px;width:960px;height:540px;border-radius:26px;overflow:hidden;background:#000;box-shadow:0 22px 50px rgba(18,35,70,.35);border:8px solid #fff}
+#s14 .vid video{width:100%;height:100%;object-fit:cover;display:block}
+#s14 .mq{left:1070px;top:200px;width:460px;padding:12px;border-radius:24px;background:#fff;box-shadow:0 18px 40px rgba(18,35,70,.3);cursor:zoom-in}
+#s14 .mq img{width:100%;height:190px;object-fit:cover;border-radius:16px;display:block}
+#s14 .mq p{font-size:18px;font-weight:700;margin:10px 6px 2px;color:#1c2533}#s14 .mq p span{display:block;font-size:15px;color:var(--pt);font-weight:600}
+#s14 .ty{left:1070px;top:490px;width:460px;padding:18px 22px}
+#s14 .ty .big{font-size:27px;font-weight:800;line-height:1.15;color:#1c2533}#s14 .ty .big span{display:block;font-size:22px;font-weight:600;color:var(--pt);margin-top:4px}
+#s14 .ty p{font-size:14.5px;line-height:1.38;margin-top:10px;color:#333}#s14 .ty p span{display:block;color:var(--pt);margin-top:6px}
+#s14 .ty .fl{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:15px;color:#1f4f8f}
+#s14 .ty .fl .flag{flex:none}
 #s14 .next{left:70px;top:200px;width:620px}
 #s14 .nx{display:flex;align-items:center;margin-bottom:22px}
 #s14 .nx .ic{width:84px;height:84px}
@@ -646,20 +656,15 @@ h2.t.w{color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
 </section>
 
 <!-- 14 -->
-<section class="slide g1" id="s14" data-notes="<b>Cierre (5 min).</b> Pedir ideas a estudiantes de ambos países y escribirlas en el teléfono (botón rojo = Chile, verde = Brasil). Terminar agradeciendo en ambos idiomas.">
-  <h2 class="t w a">Próximos Pasos <b>y Muro de Ideas</b><span class="pt" style="color:#fff">Próximos Passos e Mural de Ideias</span></h2>
-  <div class="abs next">
-    <div class="nx a" style="--d:1"><div class="ic" data-i="chat"></div><div class="pill">Balance final entre docentes<span>Balanço final entre os professores</span></div></div>
-    <div class="nx a" style="--d:2"><div class="ic" data-i="book"></div><div class="pill">Relato de la experiencia para el E-book PROCIN, Vol. 2<span>Relato da experiência para o E-book PROCIN, Vol. 2</span></div></div>
-    <div class="nx a" style="--d:3"><div class="ic" data-i="drop"></div><div class="pill">Seguir usando la escuela como laboratorio del agua<span>Continuar usando a escola como laboratório da água</span></div></div>
+<section class="slide g1" id="s14" data-notes="<b>Resultado final y cierre (3 min).</b> Reproducir el video de la maqueta (49 s): el agua sucia se eleva, pasa por los 5 filtros de los grupos, se acumula y riega la planta por microaspersión de forma automática. Terminar agradeciendo en ambos idiomas.">
+  <h2 class="t w a">Resultado Final: <b>Nuestra Maqueta</b><span class="pt" style="color:#fff">Resultado Final: A Nossa Maquete</span></h2>
+  <div class="abs vid a" style="--d:1"><video src="assets/video-maqueta.mp4" poster="assets/video-maqueta.jpg" controls playsinline preload="none"></video></div>
+  <div class="abs mq zoom a" style="--d:2" data-cap="Maqueta final · Maquete final"><img loading="lazy" decoding="async" src="assets/maqueta-final.jpg" alt="Maqueta final"><p>Filtrado + riego automático<span>Filtragem + irrigação automática</span></p></div>
+  <div class="abs glass ty a" style="--d:3">
+    <div class="big">¡Gracias por la oportunidad!<span>Obrigado pela oportunidade!</span></div>
+    <p>Al Prof. Adilson Rodrigues Camacho, a la Etec 154 y a todos los estudiantes de Chile y Brasil por compartir este proyecto.<span>Ao Prof. Adilson Rodrigues Camacho, à Etec 154 e a todos os estudantes do Chile e do Brasil por compartilharem este projeto.</span></p>
+    <div class="fl"><span class="flag" data-f="cl"></span><b>PROYECTO COIL CHILE – BRASIL</b><span class="flag" data-f="br"></span></div>
   </div>
-  <div class="abs thanks a" style="--d:4">¡Gracias!<span>Obrigado!</span></div>
-  <div class="phone a" style="--d:2"><div class="scr"><div class="notch"></div>
-    <div class="ph">¿Qué harías para cuidar el agua en tu escuela?<span>O que você faria para cuidar da água?</span></div>
-    <div class="chat" id="chat"></div>
-    <div class="inp"><input id="ideaIn" maxlength="80" placeholder="Escribe una idea…"><button class="b1" id="bCl" title="Chile">CL</button><button class="b2" id="bBr" title="Brasil">BR</button></div>
-  </div></div>
-  <div class="abs glass qr a" style="--d:3"><div class="ic" data-i="chat" style="margin:0 auto 14px"></div><p>¡Comparte tu idea!<span>Compartilhe sua ideia!</span></p><small>El docente la escribe en el teléfono y elige la bandera del país.</small><button class="clr" id="ideaClr">Limpiar muro</button></div>
 </section>
 
 </div></div>
@@ -813,13 +818,16 @@ rV.oninput=rT.oninput=calc;calc();
 /* flips */
 document.querySelectorAll('.flip').forEach(f=>f.onclick=()=>f.classList.toggle('on'));
 
-/* S14 muro */
+/* S14 muro (reemplazado) */
+if(document.getElementById('chat')){
+
 const chat=document.getElementById('chat'),inp=document.getElementById('ideaIn');let ideas=[];
 try{ideas=JSON.parse(localStorage.getItem('coil-ideas2')||'[]')}catch(e){}
 function draw(){chat.innerHTML=ideas.slice(-9).map(m=>`<div class="msg ${m.c}">${m.c==='cl'?'🇨🇱':'🇧🇷'} ${m.t.replace(/</g,'&lt;')}</div>`).join('')}
 function add(c){const t=inp.value.trim();if(!t)return;ideas.push({t,c});inp.value='';try{localStorage.setItem('coil-ideas2',JSON.stringify(ideas))}catch(e){}draw()}
 document.getElementById('bCl').onclick=()=>add('cl');document.getElementById('bBr').onclick=()=>add('br');inp.addEventListener('keydown',e=>{if(e.key==='Enter')add('cl')});
 document.getElementById('ideaClr').onclick=()=>{ideas=[];try{localStorage.removeItem('coil-ideas2')}catch(e){}draw()};draw();
+}
 
 
 /* móvil: deslizar y aviso de giro */
